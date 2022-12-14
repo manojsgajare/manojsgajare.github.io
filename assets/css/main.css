@@ -13,11 +13,18 @@ body {
     padding: 0;
     font-size: 100%;
     line-height: 1.5;
-    color: #555;
-    font-family: 'Nunito Sans', sans-serif
+    color: rgb(253, 247, 247);
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #072f45;
+    background: #072f45;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #072f45, #072f45);
+    /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #072f45, #044568); 
 }
 :root {
     --main-color: #033a80;
+   
 }
 
 article,
@@ -4784,6 +4791,12 @@ section {
     display: block
 }
 
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 h1,
 h2,
 h3,
@@ -4792,7 +4805,7 @@ strong {
     margin-top: 1em;
     padding-top: 1em;
     line-height: 1.25;
-    color: #333
+    color: rgb(253, 253, 253)
 }
 
 h2 {
@@ -4824,11 +4837,11 @@ a img {
 }
 
 #particles-js {
-    background: #1488CC;
+    background: #072f45;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+    background: -webkit-linear-gradient(to right, #072f45, #072f45);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2B32B2, #1488CC);
+   background: linear-gradient(to right, #072f45, #044568); 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     display: flex;
@@ -4847,7 +4860,7 @@ a img {
 
 .header {
     z-index: 1;
-    text-align: center;
+    text-align: left;
     color: #fff;
     position: absolute;
     font-family: 'Rubik', sans-serif;
@@ -4871,7 +4884,7 @@ a img {
 @media only screen and (min-width:550px) {
     .header .site-title {
         margin: 0;
-        font-size: 100px
+        font-size: 70px
     }
 }
 
@@ -4908,8 +4921,8 @@ a img {
 
 .header-icons {
     display: flex;
-    justify-content: center;
-    text-align: center
+    /* justify-content: center;
+    text-align: center */
 }
 
 .down,
@@ -4931,7 +4944,7 @@ a img {
 
 .header-icons .icon:active,
 .header-icons .icon:hover {
-    color: #1488CC;
+    color: #072f45;
     background: #fff
 }
 
@@ -4988,7 +5001,8 @@ a img {
 }
 
 .tech {
-    margin: 10px
+    margin: 10px;
+    color: white;
 }
 
 .user {
@@ -5032,7 +5046,8 @@ a img {
 }
 
 .user-projects {
-    margin: 20px auto
+    margin: 20px auto;
+    /* border: 1px solid white; */
 }
 
 .user-projects img {
@@ -5051,7 +5066,8 @@ a img {
 }
 
 .user-projects p {
-    margin-right: 5px
+    margin-right: 5px;
+   
 }
 
 @media only screen and (min-width:550px) {
@@ -5089,9 +5105,9 @@ a img {
     display: inline-block;
     margin: 10px 0;
     padding: 5px;
-    color: #1488CC;
+    color: #bcd1dd;
     background-color: transparent;
-    border: 1px solid #1488CC;
+    border: 1px solid #606e75;
     border-radius: 10px;
     text-align: center;
     outline: 0;
@@ -5102,18 +5118,19 @@ a img {
 
 .project-link:active,
 .project-link:hover {
-    background-color: #5347a8;
-    border-color: #5347a8;
+    background-color: #112734;
+    border-color: #d5d8da;
     color: #fff;
     transition: color .3s ease-in, background-color .3s ease-in, border-color .3s ease-in
 }
 
 .footer {
-    background: #1488CC;
+    /* background: #1488CC; */
+    background: #072f45;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);
+    /* background: -webkit-linear-gradient(to right, #01031d, #1488CC);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2B32B2, #1488CC);
+    /*background: linear-gradient(to right, #2B32B2, #1488CC); */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 10px 0;
     margin-top: 50px;
@@ -5129,7 +5146,7 @@ a img {
     margin-top: 0px;
     width: 30%;
     height: 300px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 }
 
 .footer .love {
@@ -5264,7 +5281,7 @@ a img {
 
   /* tooltip */
   .resumeClass{
-    background-color: #1971c5;
+    background-color: #126e9f;
     padding: 10px;
     color: white;
     width: 160px;
@@ -5276,7 +5293,7 @@ a img {
     justify-content: space-around;
   }
   .resumeClass:hover{
-    color: #1488CC;
+    color: #095279;
     background-color:white;
   }
 
@@ -5290,3 +5307,21 @@ a img {
   #emailHover:hover{
         color: orange;
   }
+
+  .logo img{
+    animation: revolve 2s infinite ; 
+    border-radius: 30%;
+    margin-top: 0%;
+    margin-left: 50%;
+
+  }
+  @keyframes revolve {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+		/* width: 200px;
+		opacity: 0; */
+	}
+}
