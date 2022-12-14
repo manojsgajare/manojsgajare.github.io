@@ -5279,28 +5279,7 @@ a img {
     height: 80%;
   }
 
-  /* tooltip */
-  .resumeClass{
-    background-color: #126e9f;
-    padding: 10px;
-    color: white;
-    width: 160px;
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .resumeClass:hover{
-    color: #095279;
-    background-color:white;
-  }
-
-  .resumeButton{
-    height: 10px;
-    width: 5px;
-  }
+ 
   .emailHover{
     color: white;
   }
@@ -5325,3 +5304,80 @@ a img {
 		opacity: 0; */
 	}
 }
+
+
+
+/* Hover template */
+.resumeClass::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    border-radius: 20px;
+  }
+  
+  .resumeClass:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    border-radius: 20px;
+  }
+  
+ .resumeClass::before {
+    content: " ";
+    display: block;
+    
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: rgb(223, 225, 232);
+    z-index: -1;
+    transition: transform .5s ease;
+    border-radius: 20px;
+    
+  }
+  
+  .resumeClass {
+    position: relative;
+    /* font-size: 5rem; */
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    width: 160px;
+  }
+  
+  /* html {
+    block-size: 100%;
+    inline-size: 100%;
+  } */
+   /* tooltip */
+  /*.resumeClass{
+    background-color: #072f45;
+    padding: 10px;
+    /* color: white; */
+    /*width: 160px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .resumeClass:hover{
+    color: #095279;
+    background-color:white;
+  }*/
+
+  .resumeButton{
+    height: 10px;
+    width: 5px;
+  }
+  
+  
+  @media (orientation: landscape) {
+    body {
+      grid-auto-flow: column;
+    }
+  }
+  
